@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2024 at 01:54 PM
+-- Generation Time: Feb 19, 2024 at 03:57 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -49,18 +49,19 @@ INSERT INTO `products` (`ShopID`, `ProductID`, `ProductName`, `Unit`, `Price`, `
 (3, 6, 'Headphones', 1, '500.00', 0),
 (3, 7, 'aa', 1, '1.00', 0),
 (2, 8, 'bb', 12331, '33.00', 0),
-(3, 9, 'test1A', 1, '111.00', 0),
+(7, 9, 'test1A', 1, '111.00', 0),
 (2, 10, 'a', 1, '1.00', 1),
 (2, 11, 'a', 1, '1.00', 1),
-(2, 12, 'qq', 1, '122222.00', 1);
+(2, 12, 'qq', 1, '122222.00', 1),
+(2, 13, 'a', 2, '3.00', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `route` เส้นทาง
+-- Table structure for table `route`
 --
 
-CREATE TABLE `route` ( 
+CREATE TABLE `route` (
   `RouteID` int(11) NOT NULL,
   `AttractionID` int(11) DEFAULT NULL,
   `Time` time DEFAULT NULL,
@@ -95,7 +96,13 @@ CREATE TABLE `shops` (
 INSERT INTO `shops` (`ShopID`, `ShopName`, `statusDelete`) VALUES
 (1, 'ABC Convenience Store', 0),
 (2, 'XYZ Souvenir Shop', 0),
-(3, 'Best Deals Electronics', 0);
+(3, 'Best Deals Electronics', 1),
+(4, 'test', 1),
+(5, 'test', 1),
+(6, 'ttt', 1),
+(7, 'MainTest', 0),
+(8, 'ss', 1),
+(9, 'ssss', 1);
 
 -- --------------------------------------------------------
 
@@ -128,15 +135,17 @@ INSERT INTO `touristattractions` (`AttractionID`, `AttractionName`, `Latitude`, 
 (9, 'test1', '111.000000', '111.000000', 1),
 (10, 'a', '1.000000', '1.000000', 1),
 (11, 'a', '1.000000', '1.000000', 1),
-(12, 'bb', '1.000000', '1.000000', 1);
+(12, 'bb', '1.000000', '1.000000', 1),
+(13, 'ss22a', '1.000000', '1.000000', 1),
+(14, 'ddd', '12.000000', '1.000000', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `train` รถไฟ
+-- Table structure for table `train`
 --
 
-CREATE TABLE `train` ( 
+CREATE TABLE `train` (
   `TrainID` int(11) NOT NULL,
   `TrainNumber` varchar(50) DEFAULT NULL,
   `statusDelete` int(1) NOT NULL
